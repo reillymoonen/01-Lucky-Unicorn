@@ -5,5 +5,3 @@ while name.lower() != "xxx":
 
 print()
 print("We are done!")
-
-#hi
