@@ -25,6 +25,7 @@ def instructions():
     print()
     return ""
 
+
 # Main Routine goes here...
 played_before = yes_no("Have you played the "
                                 "game before?")
