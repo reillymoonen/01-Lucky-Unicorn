@@ -3,7 +3,7 @@ balance = 5
 
 rounds_played = 0
 
-play_again = input("Press <Enter> to play...")
+play_again = input("Press <Enter> to play...").lower()
 while play_again == "":
 
     # increase # of rounds played
