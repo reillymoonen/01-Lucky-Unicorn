@@ -60,7 +60,7 @@ print()
 how_much = num_check("How much would you "
                      "like to play with? ", 0, 10)
 
-balance = 10
+balance = how_much
 
 rounds_played = 0
 
