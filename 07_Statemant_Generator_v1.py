@@ -1,13 +1,13 @@
 
-def statement_generator(statemant, decoration):
+def statement_generator(statement, decoration):
 
     sides = decoration * 3
 
-    statemant = "{} {} {}".format(sides, statemant, sides)
-    top_bottom = decoration * len(statemant)
+    statement = "{} {} {}".format(sides, statement, sides)
+    top_bottom = decoration * len(statement)
 
     print(top_bottom)
-    print(statemant)
+    print(statement)
     print(top_bottom)
 
     return ""
