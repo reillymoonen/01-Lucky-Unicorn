@@ -49,7 +49,6 @@ def num_check(question, low, high):
 
 
 def statement_generator(statement, decoration):
-
     sides = decoration * 3
 
     statement = "{} {} {}".format(sides, statement, sides)
@@ -87,6 +86,7 @@ while play_again == "":
     # Print round number
     print()
     print("*** Round #{} ***".format(rounds_played))
+    print()
 
     chosen_num = random.randint(1, 100)
 
@@ -95,12 +95,14 @@ while play_again == "":
     # user gets a unicorn (add $4 to balance)
     if 1 <= chosen_num <= 5:
         chosen = "unicorn"
+        prize_decoration = "!"
         balance += 4
 
     # if the random # is between 6 and 36
     # user gets a donkey (subtract $1 from balance)
     elif 6 <= chosen_num <= 36:
         chosen = "donkey"
+        prize_decoration = "D"
         balance -= 1
 
     # The token is either a horse or a zebra...
@@ -110,14 +112,18 @@ while play_again == "":
         # item to a horse
         if chosen_num % 2 == 0:
             chosen = "horse"
+            prize_decoration = "H"
 
         # otherwise set it to a zebra
         else:
             chosen = "zebra"
+            prize_decoration = "Z"
         balance -= 0.5
 
-    print("You got a {}. Your Balance is "
-          "${:.2f}".format(chosen, balance))
+    outcome = ("You got a {}. Your Balance is "
+               "${:.2f}".format(chosen, balance))
+
+    statement_generator(outcome, prize_decoration)
 
     if balance < 1:
         play_again = "xxx"
