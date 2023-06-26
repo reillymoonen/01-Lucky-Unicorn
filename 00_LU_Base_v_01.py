@@ -85,7 +85,9 @@ while play_again == "":
 
     # Print round number
     print()
-    print("*** Round #{} ***".format(rounds_played))
+    print("#################")
+    print("### Round #{} ###".format(rounds_played))
+    print("#################")
     print()
 
     chosen_num = random.randint(1, 100)
@@ -133,4 +135,8 @@ while play_again == "":
                            "or 'xxx' to quit")
 
 print()
-print("Final Balance ${}".format(balance))
+print("===============")
+print("=== Results ===")
+print("===============")
+print("Final Balance is: ${}".format(balance))
+print("Thank you for playing")
