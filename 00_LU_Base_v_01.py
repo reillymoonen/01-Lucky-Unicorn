@@ -5,16 +5,16 @@ import random
 def yes_no(questions):
     valid = False
     while not valid:
-        responce = input("Have you played this game "
+        response = input("Have you played this game "
                          "before?").lower()
 
-        if responce == "yes" or responce == "y":
-            responce = "yes"
-            return responce
+        if response == "yes" or response == "y":
+            response = "yes"
+            return response
 
-        elif responce == "no" or responce == "n":
-            responce = "no"
-            return responce
+        elif response == "no" or response == "n":
+            response = "no"
+            return response
 
         else:
             print("Please answer yes / no")
